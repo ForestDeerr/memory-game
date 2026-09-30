@@ -1,4 +1,7 @@
 import { cards } from "../assets/memory-cards.js";
+import { shuffleCards } from "./utils/shuffle-cards.js";
+
+const cardElements = [];
 
 function createGridSection() {
   const gridSection = document.createElement("section");
@@ -15,9 +18,13 @@ function createGridSection() {
       img.alt = name;
 
       card.append(img);
-      gridSection.append(card);
+      cardElements.push(card);
     });
   }
+
+  shuffleCards(cardElements);
+
+  gridSection.append(...cardElements);
   return gridSection;
 }
 
