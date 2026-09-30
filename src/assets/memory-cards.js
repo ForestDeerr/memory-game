@@ -1,27 +1,16 @@
-import bear from "./bear.svg";
-import cat from "./cat.svg";
-import dog from "./dog.svg";
-import fox from "./fox.svg";
-import lion from "./lion.svg";
-import monkey from "./monkey.svg";
-import owl from "./owl.svg";
-import panda from "./panda.svg";
-import pig from "./pig.svg";
-import rabbit from "./rabbit.svg";
-import backFace from "./back-face.svg";
-
 const cards = {
-  bear,
-  cat,
-  dog,
-  fox,
-  lion,
-  monkey,
-  owl,
-  panda,
-  pig,
+  bear: "../src/assets/bear.svg",
+  cat: "../src/assets/cat.svg",
+  dog: "../src/assets/dog.svg",
+  fox: "../src/assets/fox.svg",
+  lion: "../src/assets/lion.svg",
+  monkey: "../src/assets/monkey.svg",
+  owl: "../src/assets/owl.svg",
+  panda: "../src/assets/panda.svg",
+  pig: "../src/assets/pig.svg",
+  rabbit: "../src/assets/rabbit.svg",
 };
 
-const backFaceCard = backFace;
+const backFaceCard = "../src/assets/back-face.svg";
 
 export { cards, backFaceCard };
