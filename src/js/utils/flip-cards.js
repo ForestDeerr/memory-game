@@ -1,4 +1,5 @@
 import { numberOfPairsCount } from "../counters-section.js";
+import { checkFinishGame } from "./check-finish.js";
 import { moveCounter } from "./move-counter.js";
 
 let hasFlippedCard = false;
@@ -19,7 +20,7 @@ function flipCard() {
     hasFlippedCard = false;
     moveCounter();
     checkFlipCards();
-    // checkFinishGame();
+    checkFinishGame(flippedCardsCount);
   }
 }
 
