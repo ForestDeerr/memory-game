@@ -7,4 +7,4 @@ function moveCounter() {
   numberOfMovesCount.textContent = quantityMoves;
 }
 
-export { moveCounter };
+export { moveCounter, quantityMoves };
