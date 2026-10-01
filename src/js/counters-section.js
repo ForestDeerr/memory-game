@@ -1,4 +1,7 @@
+const numberOfMovesCount = document.createElement("p");
 const movesCount = 0;
+
+const numberOfPairsCount = document.createElement("p");
 const pairsFound = 0;
 
 function createCountersSection() {
@@ -11,7 +14,6 @@ function createCountersSection() {
   const numberOfMovesTitle = document.createElement("p");
   numberOfMovesTitle.textContent = "Число ходов";
 
-  const numberOfMovesCount = document.createElement("p");
   numberOfMovesCount.textContent = movesCount;
 
   numberOfMoves.append(numberOfMovesTitle, numberOfMovesCount);
@@ -22,7 +24,6 @@ function createCountersSection() {
   const numberOfPairsTitle = document.createElement("p");
   numberOfPairsTitle.textContent = "Найдено пар";
 
-  const numberOfPairsCount = document.createElement("p");
   numberOfPairsCount.textContent = pairsFound;
 
   numberOfPairs.append(numberOfPairsTitle, numberOfPairsCount);
@@ -31,4 +32,4 @@ function createCountersSection() {
 
   return countersSection;
 }
-export { createCountersSection };
+export { createCountersSection, numberOfMovesCount, numberOfPairsCount };

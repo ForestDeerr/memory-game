@@ -1,7 +1,9 @@
+import { numberOfPairsCount } from "../counters-section.js";
+import { moveCounter } from "./move-counter.js";
+
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let isLockBoard = false;
-let quantityMoves = 0;
 let flippedCardsCount = 0;
 
 function flipCard() {
@@ -15,7 +17,7 @@ function flipCard() {
   } else {
     secondCard = this;
     hasFlippedCard = false;
-    // moveCounter();
+    moveCounter();
     checkFlipCards();
     // checkFinishGame();
   }
@@ -25,10 +27,8 @@ function checkFlipCards() {
   if (firstCard.dataset.framework === secondCard.dataset.framework) {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
-    flippedCardsCount = flippedCardsCount + 2;
-    setTimeout(() => {
-      FlippedCardSongTrue.play();
-    }, 500);
+    flippedCardsCount = flippedCardsCount + 1;
+    numberOfPairsCount.textContent = flippedCardsCount;
   } else {
     isLockBoard = true;
     setTimeout(() => {
@@ -36,7 +36,6 @@ function checkFlipCards() {
       secondCard.classList.remove("flip");
       isLockBoard = false;
       firstCard = null;
-      FlippedCardSongFalse.play();
     }, 1000);
   }
 }
