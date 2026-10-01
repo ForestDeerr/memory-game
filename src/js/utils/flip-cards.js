@@ -7,6 +7,10 @@ let firstCard, secondCard;
 let isLockBoard = false;
 let flippedCardsCount = 0;
 
+function resetFlippedCardsCount() {
+  flippedCardsCount = 0;
+}
+
 function flipCard() {
   if (isLockBoard === true) return;
   if (this === firstCard) return;
@@ -41,4 +45,4 @@ function checkFlipCards() {
   }
 }
 
-export { flipCard };
+export { flipCard, resetFlippedCardsCount };

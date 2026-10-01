@@ -2,9 +2,9 @@ import { backFaceCard } from "../assets/memory-cards.js";
 import { flipCard } from "./utils/flip-cards.js";
 
 const cardElements = [];
+const gridSection = document.createElement("section");
 
 function createGridSection(cards) {
-  const gridSection = document.createElement("section");
   gridSection.className = "grid-section";
 
   cards.forEach((element) => {
@@ -35,4 +35,4 @@ function addCardEventListeners(cardElements) {
   cardElements.forEach((card) => card.addEventListener("click", flipCard));
 }
 
-export { createGridSection };
+export { createGridSection, cardElements, gridSection };
