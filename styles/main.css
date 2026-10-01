@@ -160,3 +160,34 @@ button:hover {
 .title-winners {
   display: flex;
 }
+
+.leaders-content {
+  padding: 10px;
+}
+
+.leaders-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Press Start 2P", monospace;
+  font-size: 12px;
+}
+
+.leaders-table th,
+.leaders-table td {
+  padding: 12px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+.leaders-table th {
+  background: black;
+  color: white;
+}
+
+.leaders-table tbody tr:first-child {
+  background: #ddd;
+}
+
+.leaders-empty {
+  text-align: center;
+}
