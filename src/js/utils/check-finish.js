@@ -5,7 +5,7 @@ import { winnerContent } from "../modal-windows/winner-content.js";
 const QUANTITY_CARDS = Object.keys(cards).length;
 
 function checkFinishGame(flippedCardsCount) {
-  if (flippedCardsCount === QUANTITY_CARDS * 2) {
+  if (flippedCardsCount === QUANTITY_CARDS) {
     endGame();
   }
 }

@@ -1,5 +1,9 @@
 import { numberOfMovesCount, numberOfPairsCount } from "../counters-section.js";
-import { cardElements, gridSection } from "../grid-section.js";
+import {
+  addCardEventListeners,
+  cardElements,
+  gridSection,
+} from "../grid-section.js";
 import { resetFlippedCardsCount } from "./flip-cards.js";
 import { resetQuantityMoves } from "./move-counter.js";
 import { shuffleCards } from "./shuffle-cards.js";
@@ -16,6 +20,7 @@ function resetSettingGame() {
 
   const shuffledCards = [...cardElements].sort(() => Math.random() - 0.5);
   gridSection.replaceChildren(...shuffledCards);
+  addCardEventListeners(cardElements);
 }
 
 export { resetSettingGame };

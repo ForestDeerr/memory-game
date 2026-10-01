@@ -35,4 +35,4 @@ function addCardEventListeners(cardElements) {
   cardElements.forEach((card) => card.addEventListener("click", flipCard));
 }
 
-export { createGridSection, cardElements, gridSection };
+export { createGridSection, cardElements, gridSection, addCardEventListeners };
