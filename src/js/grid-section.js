@@ -1,31 +1,38 @@
-import { cards } from "../assets/memory-cards.js";
-import { shuffleCards } from "./utils/shuffle-cards.js";
+import { backFaceCard } from "../assets/memory-cards.js";
+import { flipCard } from "./utils/flip-cards.js";
 
 const cardElements = [];
 
-function createGridSection() {
+function createGridSection(cards) {
   const gridSection = document.createElement("section");
   gridSection.className = "grid-section";
 
-  for (let i = 1; i <= 2; i++) {
-    Object.entries(cards).forEach(([name, image]) => {
-      const card = document.createElement("div");
-      card.className = "card";
+  cards.forEach((element) => {
+    const card = document.createElement("div");
+    card.className = "card";
+    card.dataset.framework = element.name;
 
-      const img = document.createElement("img");
-      img.className = "front-face";
-      img.src = image;
-      img.alt = name;
+    const frontFace = document.createElement("img");
+    frontFace.className = "front-face";
+    frontFace.src = element.image;
+    frontFace.alt = element.name;
 
-      card.append(img);
-      cardElements.push(card);
-    });
-  }
+    const backFace = document.createElement("img");
+    backFace.className = "back-face";
+    backFace.src = backFaceCard;
 
-  shuffleCards(cardElements);
+    card.append(frontFace, backFace);
+    gridSection.append(card);
+    cardElements.push(card);
+  });
 
-  gridSection.append(...cardElements);
+  addCardEventListeners(cardElements);
+
   return gridSection;
+}
+
+function addCardEventListeners(cardElements) {
+  cardElements.forEach((card) => card.addEventListener("click", flipCard));
 }
 
 export { createGridSection };
