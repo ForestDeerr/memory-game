@@ -1,9 +1,10 @@
 function shuffleCards(cards) {
-  const QUANTITY_CARDS = cards.length;
-  cards.forEach((card) => {
-    let randomPos = Math.floor(Math.random() * QUANTITY_CARDS);
-    card.style.order = randomPos;
-  });
+  for (let i = cards.length - 1; i > 0; i -= 1) {
+    const randomIndex = Math.floor(Math.random() * (i + 1));
+    [cards[i], cards[randomIndex]] = [cards[randomIndex], cards[i]];
+  }
+
+  return cards;
 }
 
 export { shuffleCards };
