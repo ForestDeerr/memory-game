@@ -1,16 +1,16 @@
 const cards = {
-  bear: "./bear.svg",
-  cat: "../src/assets/cat.svg",
-  dog: "../src/assets/dog.svg",
-  fox: "../src/assets/fox.svg",
-  lion: "../src/assets/lion.svg",
-  monkey: "../src/assets/monkey.svg",
-  owl: "../src/assets/owl.svg",
-  panda: "../src/assets/panda.svg",
+  bear: "../memory-game/src/assets/bear.svg",
+  cat: "../memory-game/src/assets/cat.svg",
+  dog: "../memory-game/src/assets/dog.svg",
+  fox: "../memory-game/src/assets/fox.svg",
+  lion: "../memory-game/src/assets/lion.svg",
+  monkey: "../memory-game/src/assets/monkey.svg",
+  owl: "../memory-game/src/assets/owl.svg",
+  panda: "../memory-game/src/assets/panda.svg",
   // pig: "../src/assets/pig.svg",
   // rabbit: "../src/assets/rabbit.svg",
 };
 
-const backFaceCard = "./back-face.svg";
+const backFaceCard = "../memory-game/src/assets/back-face.svg";
 
 export { cards, backFaceCard };
