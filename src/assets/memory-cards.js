@@ -7,8 +7,8 @@ const cards = {
   monkey: "../src/assets/monkey.svg",
   owl: "../src/assets/owl.svg",
   panda: "../src/assets/panda.svg",
-  pig: "../src/assets/pig.svg",
-  rabbit: "../src/assets/rabbit.svg",
+  // pig: "../src/assets/pig.svg",
+  // rabbit: "../src/assets/rabbit.svg",
 };
 
 const backFaceCard = "../src/assets/back-face.svg";

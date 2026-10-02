@@ -54,7 +54,7 @@ button:hover {
 }
 
 .card {
-  width: calc(20% - 10px);
+  width: calc(25% - 10px);
   height: calc(25% - 10px);
   margin: 5px;
   position: relative;
