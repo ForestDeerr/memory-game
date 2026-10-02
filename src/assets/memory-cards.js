@@ -1,5 +1,5 @@
 const cards = {
-  bear: "../src/assets/bear.svg",
+  bear: "./bear.svg",
   cat: "../src/assets/cat.svg",
   dog: "../src/assets/dog.svg",
   fox: "../src/assets/fox.svg",
@@ -11,6 +11,6 @@ const cards = {
   // rabbit: "../src/assets/rabbit.svg",
 };
 
-const backFaceCard = "../src/assets/back-face.svg";
+const backFaceCard = "./back-face.svg";
 
 export { cards, backFaceCard };
