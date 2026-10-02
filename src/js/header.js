@@ -13,7 +13,9 @@ function createHeader() {
   leaderBoardBtn.textContent = "Таблица лидеров";
 
   leaderBoardBtn.addEventListener("click", () => {
-    createModal("Лидеры", createLeadersTable());
+    const leadersContent = createLeadersTable();
+
+    createModal("Лидеры", leadersContent);
   });
 
   header.append(newGameBtn, leaderBoardBtn);

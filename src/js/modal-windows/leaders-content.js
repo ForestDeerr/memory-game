@@ -1,32 +1,13 @@
-const leaders = [
-  {
-    place: 1,
-    moves: 8,
-    date: "29.09.2026",
-  },
-  {
-    place: 2,
-    moves: 8,
-    date: "30.09.2026",
-  },
-  {
-    place: 3,
-    moves: 10,
-    date: "27.09.2026",
-  },
-  {
-    place: 4,
-    moves: 12,
-    date: "01.10.2026",
-  },
-  {
-    place: 5,
-    moves: 15,
-    date: "28.09.2026",
-  },
-];
+import { formatDate } from "../utils/format-date.js";
+import { getGameResults } from "../utils/get-game-results.js";
 
 function createLeadersTable() {
+  const leaders = getGameResults().map((game, index) => ({
+    place: index + 1,
+    moves: game.moves,
+    date: formatDate(game.date),
+  }));
+
   const table = document.createElement("table");
   table.className = "leaders-table";
 
