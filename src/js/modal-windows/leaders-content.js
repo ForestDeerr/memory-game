@@ -2,7 +2,16 @@ import { formatDate } from "../utils/format-date.js";
 import { getGameResults } from "../utils/get-game-results.js";
 
 function createLeadersTable() {
-  const leaders = getGameResults().map((game, index) => ({
+  const games = getGameResults();
+
+  if (games.length === 0) {
+    const message = document.createElement("p");
+    message.textContent = "Записей нет";
+
+    return message;
+  }
+
+  const leaders = games.map((game, index) => ({
     place: index + 1,
     moves: game.moves,
     date: formatDate(game.date),
